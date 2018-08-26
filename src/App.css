@@ -1,0 +1,27 @@
+.Gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.Image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+  margin: 20px;
+}
+
+.Image-portrait {
+  transform: rotate(-90deg);
+}
+
+.Image-photo {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
