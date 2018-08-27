@@ -25,3 +25,11 @@
   display: block;
   margin: auto;
 }
+
+.Filters-container {
+  display: flex;
+}
+
+.Filters-tag {
+  text-align: center;
+}
