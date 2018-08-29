@@ -10,15 +10,23 @@ class App extends Component {
     super();
 
     this.state = {
-      tags: ["colorado", "stars", "banff"],
-      activeTags: []
+      tags: { colorado: false, stars: false, banff: false }
     };
   }
+
+  handleTagClick = tag => {
+    this.setState(prevState => ({
+      tags: { ...prevState.tags, [tag]: !prevState.tags[tag] }
+    }));
+  };
+
   render() {
+    const { tags } = this.state;
+    const showAll = Object.values(tags).reduce((a, b) => a && !b, true);
     return (
       <div className="App">
-        <Tags tags={this.state.tags} />
-        <Gallery activeTags={this.state.activeTags} />
+        <Tags handleTagClick={this.handleTagClick} tags={tags} />
+        <Gallery showAll={showAll} tags={tags} />
       </div>
     );
   }

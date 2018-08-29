@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 
 class Image extends Component {
   render() {
-    const { orientation, src } = this.props;
+    const { alt, orientation, src } = this.props;
     return (
       <div className={`Image-container Image-${orientation}`}>
-        <img className={"Image-photo"} src={src} />
+        <img alt={alt} className={"Image-photo"} src={src} />
       </div>
     );
   }

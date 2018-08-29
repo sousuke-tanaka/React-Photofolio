@@ -3,10 +3,20 @@ import PropTypes from "prop-types";
 
 class Tags extends Component {
   render() {
+    const { handleTagClick, tags } = this.props;
+
     return (
       <div className="Tags-container">
-        {this.props.tags.map(tag => {
-          return <p className="Tags-tag">{tag}</p>;
+        {Object.keys(tags).map(tag => {
+          return (
+            <button
+              className="Tags-tag"
+              key={tag}
+              onClick={() => handleTagClick(tag)}
+            >
+              {tag}
+            </button>
+          );
         })}
       </div>
     );
@@ -14,7 +24,8 @@ class Tags extends Component {
 }
 
 Tags.propTypes = {
-  tags: PropTypes.array
+  handleTagClick: PropTypes.func,
+  tags: PropTypes.object
 };
 
 export default Tags;
