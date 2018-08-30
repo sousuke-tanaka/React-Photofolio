@@ -28,6 +28,7 @@
   max-height: 100%;
   display: block;
   margin: auto;
+  cursor: pointer;
 }
 
 .Tags-container {
@@ -37,4 +38,32 @@
 
 .Tags-tag {
   text-align: center;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.Modal-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Modal-landscape {
+  height: auto;
+  width: 70%;
+}
+
+.Modal-portrait {
+  height: 63%;
+  width: auto;
+  transform: rotate(-90deg);
 }
