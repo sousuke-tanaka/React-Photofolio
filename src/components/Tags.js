@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
 
 class Tags extends Component {
   render() {
@@ -9,9 +10,10 @@ class Tags extends Component {
       <div className="Tags-container">
         <span className="Tags-title">tags:</span>
         {Object.keys(tags).map(tag => {
+          console.log(tag);
           return (
             <button
-              className="Tags-tag"
+              className={cx("Tags-tag", { "Tags-active": tags[tag] })}
               key={tag}
               onClick={() => handleTagClick(tag)}
             >

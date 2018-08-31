@@ -50,6 +50,10 @@
   outline: none;
 }
 
+.Tags-active {
+  color: black;
+}
+
 .Tags-title {
   font-size: 13px;
   text-align: center;
