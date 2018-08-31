@@ -27,4 +27,9 @@ class ModalPhotoContent extends Component {
   }
 }
 
+ModalPhotoContent.propTypes = {
+  onClick: PropTypes.func,
+  photo: PropTypes.object
+};
+
 export default ModalPhotoContent;

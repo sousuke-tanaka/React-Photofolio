@@ -4,13 +4,21 @@ import Tags from "./components/Tags";
 import Gallery from "./components/Gallery";
 
 import "./App.css";
+import { photoData } from "./util/photoData";
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      tags: { colorado: false, stars: false, banff: false }
+      tags: [
+        ...new Set(
+          [].concat.apply([], Object.values(photoData).map(photo => photo.tags))
+        )
+      ].reduce((accumulator, current) => {
+        accumulator[current] = false;
+        return accumulator;
+      }, {})
     };
   }
 

@@ -34,10 +34,31 @@
 .Tags-container {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .Tags-tag {
+  font-size: 13px;
   text-align: center;
+  background: transparent;
+  border: none;
+  font-family: verdana;
+  color: lightgray;
+  cursor: pointer;
+  line-height: 20px;
+  outline: none;
+}
+
+.Tags-title {
+  font-size: 13px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  font-family: verdana;
+  color: black;
+  line-height: 20px;
+  cursor: default;
 }
 
 .Overlay {

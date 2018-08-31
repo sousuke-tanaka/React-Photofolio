@@ -7,6 +7,7 @@ class Tags extends Component {
 
     return (
       <div className="Tags-container">
+        <span className="Tags-title">tags:</span>
         {Object.keys(tags).map(tag => {
           return (
             <button
