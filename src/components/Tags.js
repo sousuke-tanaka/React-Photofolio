@@ -8,7 +8,7 @@ class Tags extends Component {
     super();
 
     this.state = {
-      showTagMenu: false
+      showTagMenu: true
     };
   }
 
@@ -22,8 +22,25 @@ class Tags extends Component {
 
     return (
       <React.Fragment>
+        <div className="Tags-container Tags-container--desktop">
+          <span className="Tags-title">filter by tags</span>
+          <div className="Tags-group">
+            {Object.keys(tags).map(tag => {
+              console.log(tag);
+              return (
+                <button
+                  className={cx("Tags-tag", { "Tags-active": tags[tag] })}
+                  key={tag}
+                  onClick={() => handleTagClick(tag)}
+                >
+                  {tag}
+                </button>
+              );
+            })}
+          </div>
+        </div>
         {showTagMenu ? (
-          <div className="Tags-container">
+          <div className="Tags-container Tags-container--mobile">
             <div>
               <img
                 alt="Tag menu toggle"
@@ -32,7 +49,7 @@ class Tags extends Component {
                 src={arrowIconImg}
               />
             </div>
-            <span className="Tags-title">filter by tags:</span>
+            <span className="Tags-title">filter by tags</span>
             <div className="Tags-group">
               {Object.keys(tags).map(tag => {
                 console.log(tag);
@@ -49,7 +66,7 @@ class Tags extends Component {
             </div>
           </div>
         ) : (
-          <div className="Tags-collapsedTagMenu">
+          <div className="Tags-collapsedTagMenu Tags-container--mobile">
             <img
               alt="Tag menu toggle"
               className={cx("Tags-menuToggle", {
@@ -58,7 +75,7 @@ class Tags extends Component {
               onClick={this.toggleTagMenu}
               src={arrowIconImg}
             />
-            <span className="Tags-title">tag menu</span>
+            <span className="Tags-title">filter by tags</span>
           </div>
         )}
       </React.Fragment>

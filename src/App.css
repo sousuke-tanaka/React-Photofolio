@@ -94,9 +94,26 @@
   transform: rotate(-90deg);
 }
 
+.Tags-container--mobile {
+  display: none;
+}
+
+.Tags-group {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 575px) {
   .App {
     flex-direction: column-reverse;
+  }
+
+  .Tags-container--desktop {
+    display: none;
+  }
+
+  .Tags-container--mobile {
+    display: flex;
   }
 
   .Tags-container {
@@ -129,6 +146,7 @@
   }
 
   .Tags-menuToggle {
+    display: block;
     position: absolute;
     height: 15px;
     width: 15px;
@@ -137,6 +155,7 @@
   }
 
   .Tags-group {
+    flex-direction: row;
     margin: 0 auto;
   }
 
