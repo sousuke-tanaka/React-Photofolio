@@ -36,6 +36,7 @@
   flex-direction: column;
   margin-top: 20px;
   margin-left: 20px;
+  width: 110px;
 }
 
 .Tags-tag {
@@ -91,4 +92,56 @@
   height: 63%;
   width: auto;
   transform: rotate(-90deg);
+}
+
+@media (max-width: 575px) {
+  .App {
+    flex-direction: column-reverse;
+  }
+
+  .Tags-container {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    padding-top: 12px;
+    margin: 0;
+    background: white;
+    border-top: solid lightgray 1px;
+    z-index: 1;
+  }
+
+  .Tags-collapsedTagMenu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background: white;
+    border-top: solid lightgray 1px;
+    z-index: 1;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    padding-top: 12px;
+  }
+
+  .Tags-menuToggleCollapsed {
+    transform: rotate(180deg);
+  }
+
+  .Tags-menuToggle {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    margin-left: 15px;
+    left: 0px;
+  }
+
+  .Tags-group {
+    margin: 0 auto;
+  }
+
+  .Image-container {
+    height: 300px;
+    width: 300px;
+  }
 }
