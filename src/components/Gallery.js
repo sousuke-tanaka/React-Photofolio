@@ -14,6 +14,27 @@ class Gallery extends Component {
     };
   }
 
+  //Fisher-Yates (aka Knuth) Shuffle
+  shuffle = array => {
+    var currentIndex = array.length,
+      temporaryValue,
+      randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  };
+
   selectPhoto = photo => {
     this.setState({ photo }, this.toggleModal);
   };
@@ -31,7 +52,7 @@ class Gallery extends Component {
     const activeTags = Object.keys(tags).filter(tag => tags[tag]);
     return (
       <div className="Gallery-container">
-        {Object.values(photoData)
+        {this.shuffle(Object.values(photoData))
           .filter(photo => showAll || this.tagged(activeTags, photo.tags))
           .map(photo => {
             return (
