@@ -162,6 +162,9 @@
   .Tags-group {
     flex-direction: row;
     margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
   }
 
   .Image-container {
