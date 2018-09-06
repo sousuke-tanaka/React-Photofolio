@@ -20,37 +20,37 @@ export const photoData = {
     orientation: "landscape",
     tags: ["colorado", "hiking", "ollie"]
   },
-  "5": {
-    id: 5,
+  "4": {
+    id: 4,
     description: "milky way in chaffee county",
     filename: "IMG_1954.jpg",
     orientation: "landscape",
     tags: ["colorado", "camping", "milky way", "stars"]
   },
-  "6": {
-    id: 6,
+  "5": {
+    id: 5,
     description: "milky way in chaffee county",
     filename: "IMG_1967.jpg",
     // orientation: "portrait",    ,
     orientation: "landscape",
     tags: ["colorado", "camping", "milky way", "stars"]
   },
-  "7": {
-    id: 7,
+  "6": {
+    id: 6,
     description: "campsite at chaffee county",
     filename: "IMG_1977.jpg",
     orientation: "landscape",
     tags: ["colorado", "camping", "stars"]
   },
-  "8": {
-    id: 8,
+  "7": {
+    id: 7,
     description: "lake ann hike",
     filename: "IMG_2008.jpg",
     orientation: "landscape",
     tags: ["colorado", "hiking"]
   },
-  "9": {
-    id: 9,
+  "8": {
+    id: 8,
     description: "ollie on lake ann hike",
     filename: "IMG_2045.jpg",
     orientation: "landscape",
