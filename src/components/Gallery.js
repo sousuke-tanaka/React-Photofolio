@@ -9,6 +9,7 @@ class Gallery extends Component {
     super(props);
 
     this.state = {
+      photos: this.shuffle(Object.values(photoData)),
       photo: {},
       modalOpen: false
     };
@@ -52,8 +53,7 @@ class Gallery extends Component {
     const activeTags = Object.keys(tags).filter(tag => tags[tag]);
     return (
       <div className="Gallery-container">
-        {this.shuffle(Object.values(photoData))
-          .filter(photo => showAll || this.tagged(activeTags, photo.tags))
+        {this.state.photos.filter(photo => showAll || this.tagged(activeTags, photo.tags))
           .map(photo => {
             return (
               <Image
