@@ -52,14 +52,14 @@ export const photoData = {
   "8": {
     id: 8,
     description: "ollie on lake ann hike",
-    filename: "IMG_2045.jpg",
+    filename: "IMG_2045.JPG",
     orientation: "landscape",
     tags: ["colorado", "hiking", "ollie"]
   },
   "9": {
     id: 9,
     description: "ollie on lake ann hike",
-    filename: "IMG_2048.jpg",
+    filename: "IMG_2048.JPG",
     orientation: "landscape",
     tags: ["colorado", "hiking", "ollie", "lake"]
   },
