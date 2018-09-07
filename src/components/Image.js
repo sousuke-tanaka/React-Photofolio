@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
 
 class Image extends Component {
   render() {
-    const { alt, onClick, orientation, src } = this.props;
+    const { alt, onClick, orientation, rotate, src } = this.props;
     return (
-      <div className={`Image-container Image-${orientation}`}>
+      <div className={cx("Image-container", { "Image-rotate": rotate })}>
         <img alt={alt} className={"Image-photo"} onClick={onClick} src={src} />
       </div>
     );

@@ -4,6 +4,7 @@ export const photoData = {
     description: "moraine lake",
     filename: "DSC_4055.JPG",
     orientation: "portrait",
+    rotate: true,
     tags: ["banff", "hiking", "canada"]
   },
   "2": {
@@ -31,8 +32,7 @@ export const photoData = {
     id: 5,
     description: "milky way in chaffee county",
     filename: "IMG_1967.jpg",
-    // orientation: "portrait",    ,
-    orientation: "landscape",
+    orientation: "portrait",
     tags: ["colorado", "camping", "milky way", "stars"]
   },
   "6": {

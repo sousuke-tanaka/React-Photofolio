@@ -19,7 +19,7 @@
   margin: 20px;
 }
 
-.Image-portrait {
+.Image-rotate {
   transform: rotate(-90deg);
 }
 
@@ -90,6 +90,11 @@
 }
 
 .Modal-portrait {
+  height: 94%;
+  width: auto;
+}
+
+.Modal-rotate {
   height: 63%;
   width: auto;
   transform: rotate(-90deg);

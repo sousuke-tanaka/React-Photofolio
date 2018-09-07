@@ -61,6 +61,7 @@ class Gallery extends Component {
                 key={photo.id}
                 onClick={() => this.selectPhoto(photo)}
                 orientation={photo.orientation}
+                rotate={photo.rotate}
                 src={process.env.PUBLIC_URL + `/photos/${photo.filename}`}
                 tags={photo.tags}
               />
